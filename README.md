@@ -24,7 +24,7 @@ devtools::install_github("dcgerard/tensr")
 devtools::install_github("dcgerard/hose")
 ```
 
-To download the code in this repo, click on [this link](https://github.com/dcgerard/hose_paper/archive/master.zip).
+To download the code in this repo, click on [this link](https://github.com/dcgerard/reproduce_sure/archive/master.zip).
 
 Run `make`
 ==========
