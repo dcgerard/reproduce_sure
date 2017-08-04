@@ -87,6 +87,6 @@ sessionInfo()
 
 As you can see above, I've only tried this on Linux. 
 
-If you still have difficulty, please submit an [issue](https://github.com/dcgerard/hose_paper/issues).
+If you still have difficulty, please submit an [issue](https://github.com/dcgerard/reproduce_sure/issues).
 
 # References

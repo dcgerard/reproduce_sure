@@ -101,7 +101,7 @@ sessionInfo()
 #> [16] svd_0.4              evaluate_0.10.1      memoise_1.1.0       
 #> [19] Biobase_2.30.0       knitr_1.16           IRanges_2.4.8       
 #> [22] parallel_3.3.2       AnnotationDbi_1.32.3 esaBcv_1.2.1        
-#> [25] Rcpp_0.12.11         corpcor_1.6.8        scales_0.4.1        
+#> [25] Rcpp_0.12.12         corpcor_1.6.8        scales_0.4.1        
 #> [28] backports_1.0.5      S4Vectors_0.8.11     annotate_1.48.0     
 #> [31] digest_0.6.12        stringi_1.1.2        grid_3.3.2          
 #> [34] rprojroot_1.2        tools_3.3.2          magrittr_1.5        
@@ -112,7 +112,7 @@ sessionInfo()
 
 As you can see above, I've only tried this on Linux.
 
-If you still have difficulty, please submit an [issue](https://github.com/dcgerard/hose_paper/issues).
+If you still have difficulty, please submit an [issue](https://github.com/dcgerard/reproduce_sure/issues).
 
 References
 ==========
