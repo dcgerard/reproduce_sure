@@ -37,7 +37,7 @@ dat$X = dat$Index + dat$Mode / 9 - 2 / 9
 dat$Mode <- as.factor(dat$Mode)
 
 
-pdf(file = "./output/figures/low_multilinear_rank.pdf", family = "Times", height = 2, width = 6)
+pdf(file = "./output/figures/low_multilinear_rank.pdf", family = "Times", height = 1.4, width = 4.2)
 ggplot(data = dat, mapping = aes(x = X, y = `Singular Values`, linetype = Mode)) +
   geom_segment(aes(xend = X, yend = 0)) +
   theme_bw() +
@@ -94,14 +94,14 @@ dat$X <- dat$Index + (dat$Shrinkage == "Before") / 3 - 1/6
 dat$Mode <- as.factor(paste0("Mode ", dat$Mode))
 dat$Shrinkage <- factor(dat$Shrinkage, levels = c("Before", "After"))
 
-pdf(file = "./output/figures/effects_on_svs.pdf", width = 6.5, height = 2, family = "Times")
+pdf(file = "./output/figures/effects_on_svs.pdf", width = 4.5, height = 1.4, family = "Times")
 ggplot(data = dat, mapping = aes(x = X, y = SV, linetype = Shrinkage)) +
-  geom_segment(aes(xend = X, yend = 0)) +
+  geom_segment(aes(xend = X, yend = 0), lwd = 0.3) +
   facet_wrap(~Mode) +
   theme_bw() +
   theme(axis.text.x = element_blank(),
         axis.ticks.x = element_blank(),
         axis.title.x = element_blank()) +
-  ylab("Normalized Singular Values") +
+  ylab("Normalized\nSingular Values") +
   theme(strip.background = element_rect(fill="white"))
 dev.off()

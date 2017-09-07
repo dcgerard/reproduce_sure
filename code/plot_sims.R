@@ -41,12 +41,13 @@ smalldat <- ldat %>% group_by(Method, theta) %>% summarise(Mean = mean(Loss)) %>
   group_by(theta) %>% summarise(`Minimum Risk` = min(Mean))
 
 pdf(file = "./output/figures/different_scenario_sims_losses_combined2.pdf",
-    width = 6.5, height = 7, family = "Times")
+    width = 4.5, height = 4.9, family = "Times")
 ggplot(data = ldat, mapping = aes(x = Method, y = Loss)) +
   facet_wrap(~theta) +
-  geom_boxplot() +
+  geom_boxplot(outlier.size = 0.7) +
   theme_bw() +
-  theme(strip.background = element_rect(fill="white")) +
+  theme(strip.background = element_rect(fill="white"),
+        axis.text.x = element_text(size = 8)) +
   geom_hline(yintercept = 1000, lty = 2) + ## 1000 for the product of the dimension, theoretical risk of X
   geom_hline(data = smalldat, mapping = aes(yintercept = `Minimum Risk`), lty = 3)
 dev.off()
@@ -110,13 +111,14 @@ pl <- ggplot(data = sdat, mapping = aes(x = rank, y = prop, color = Method, lty 
   geom_line() +
   facet_wrap(~Mode) +
   theme_bw() +
-  theme(strip.background = element_rect(fill = "white")) +
+  theme(strip.background = element_rect(fill = "white"),
+        axis.text = element_text(size = 7)) +
   ylab("Proportion") +
   xlab("Estimated Rank") +
   scale_x_continuous(breaks = 0:10) +
   geom_vline(data = dummydat, mapping = aes(xintercept = true_rank), lty = 2) +
   ggthemes::scale_color_colorblind()
 
-pdf(file = "output/figures/est_rank.pdf", colormodel = "cmyk", family = "Times", width = 6.5, height = 2.2)
+pdf(file = "output/figures/est_rank.pdf", colormodel = "cmyk", family = "Times", width = 4.5, height = 1.5)
 print(pl)
 dev.off()
