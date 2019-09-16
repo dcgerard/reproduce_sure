@@ -13,8 +13,8 @@ knitr::opts_chunk$set(
 )
 ```
 
-# Reproduce Results of @gerard2015adaptive
-This folder contains the code necessary to reproduce the results of @gerard2015adaptive. To reproduce these results you will need to:
+# Reproduce Results of @gerard2017adaptive
+This folder contains the code necessary to reproduce the results of @gerard2017adaptive. To reproduce these results you will need to:
 
 1. Download the appropriate R packages.
 2. Run `make`.
@@ -35,7 +35,7 @@ devtools::install_github("dcgerard/hose")
 To download the code in this repo, click on [this link](https://github.com/dcgerard/reproduce_sure/archive/master.zip).
 
 # Run `make`
-To reproduce all of the results of @gerard2015adaptive, simply run `make` from the terminal (not in the R session). To reproduce the figure from Section 2, run in the terminal:
+To reproduce all of the results of @gerard2017adaptive, simply run `make` from the terminal (not in the R session). To reproduce the figure from Section 2, run in the terminal:
 ``` shell
 make change_sv
 ```
